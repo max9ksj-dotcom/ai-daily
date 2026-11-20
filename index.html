@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>나만의 AI 데일리</title>
+<meta name="description" content="내 게임 프로젝트와 Claude Code 개발에 관련된 AI 소식을 매일 정리합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="site-inner">
+      <h1>나만의 AI 데일리</h1>
+      <p>BladeArena · Beacon Beat · 서식 퍼즐 · 멍때리는 방, 그리고 Claude Code 개발에 관련된 AI 소식만 매일 밤 10시 30분에 모아요.</p>
+    </div>
+  </header>
+
+  <nav class="filters" id="filters" aria-label="프로젝트 필터"></nav>
+
+  <main id="days" class="days"></main>
+
+  <footer class="site-foot">출처는 각 기사 원문이에요. 매일 밤 10시 30분(KST)에 새 날짜가 위에 추가돼요.</footer>
+
+  <script src="data/news.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
