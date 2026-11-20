@@ -2,6 +2,62 @@
 // project 값: tool(개발 도구) / blade(BladeArena) / beacon(Beacon Beat) / format(서식 퍼즐) / mung(멍때리는 방)
 window.NEWS = [
   {
+    date: "2026-11-21",
+    lead: "<b>Unity CLI 1.0</b>이 베타를 끝내고 정식으로 나왔어요. Claude Code로 유니티를 다루는 길이 더 단단해졌어요.",
+    glance: [
+      { project: "tool",   text: "Unity CLI 1.0 정식 출시, 에이전트 연동" },
+      { project: "mung",   text: "itch.io 게임잼, 12/1~15 웹게임·AI 허용" },
+      { project: "tool",   text: "언리얼 5.9 프리뷰, Claude Code 패널 연결" }
+    ],
+    top: [
+      {
+        project: "tool", also: ["blade", "beacon"], when: "11.17",
+        title: "Unity CLI 1.0 정식 출시: 코딩 에이전트가 유니티를 명령어로 다뤄요",
+        first: "유니티가 명령어로 유니티를 다루는 도구 <b>Unity CLI 1.0</b>(CLI는 글자 명령어로 프로그램을 조작하는 방식)을 베타에서 정식 버전으로 올렸어요.",
+        body: [
+          "유니티는 1.x 버전 동안 <mark>명령어와 옵션, 출력 형태가 호환되도록 유지</mark>하고, 바꿀 때는 미리 경고를 띄우겠다고 약속했어요. 최신 Unity Hub를 쓰면 CLI가 이미 설치돼 있고요.",
+          "공식 플러그인이 없는 코딩 에이전트도 이 CLI로 유니티 안에서 일할 수 있고, 스크립트나 자동 빌드(CI)에도 쓸 수 있다고 해요."
+        ],
+        caution: "어떤 명령어가 있는지는 공식 릴리스 노트에서 직접 확인하지 못했어요. 쓰기 전에 문서를 한번 읽어 보세요.",
+        use: "Unity Hub를 최신으로 업데이트한 뒤 터미널에서 unity 명령이 되는지 먼저 확인해 보세요. 된다면 BladeArena 사본 프로젝트에서 Claude Code에게 '이 CLI 도움말을 읽고 할 수 있는 일을 정리해 줘'라고 시켜 보는 게 첫 단계예요.",
+        orig: "The Unity CLI 1.0 is here",
+        sources: [
+          { name: "Unity 공식", url: "https://unity.com/the-unity-cli-1.0-is-here" },
+          { name: "Unity CLI 릴리스 노트", url: "https://docs.unity.com/en-us/unity-cli/release-notes.md" }
+        ]
+      },
+      {
+        project: "mung", when: "12.01–12.15",
+        title: "itch.io 게임잼 ‘point’: 12월 1~15일, 웹 게임만 받고 AI는 허용",
+        first: "itch.io의 한 게임잼이 <b>12월 1일~15일</b>에 열리고, 제출물은 <b>HTML5(브라우저에서 바로 도는 웹 형식)</b>여야 해요.",
+        body: [
+          "잼 페이지에 <mark>AI 사용이 허용된다</mark>고 적혀 있어요. HTML/JS와 three.js로 만든 멍때리는 방 같은 작품과 잘 맞는 조건이에요.",
+          "같은 시기에 'AI Legends Jam'(12월 1~14일, 어떤 AI 도구든 사용)도 열린다는 글이 itch.io에 올라와 있어요."
+        ],
+        caution: "검색 요약으로 확인한 내용이라 주제·규정은 잼 페이지에서 직접 읽고 참가하세요. 앞서 소개한 Game Off와 일정이 겹쳐요.",
+        use: "멍때리는 방 장면 하나를 골라 '조작 한두 개 + 끝이 있는 작은 게임'으로 바꿀 계획을 메모해 보세요. 먼저 잼 페이지의 주제와 제출 형식을 읽어 보는 게 첫걸음이에요.",
+        orig: "Submissions open from 2026-12-01 to 2026-12-15 (itch.io jam)",
+        sources: [
+          { name: "itch.io 잼 페이지", url: "https://itch.io/jam/point" },
+          { name: "itch.io AI Legends Jam", url: "https://itch.io/t/5593404/ai-legends-jam-create-experiment-and-build-games-using-any-ai-tools-dec-1st-14th" }
+        ]
+      }
+    ],
+    items: [
+      {
+        project: "tool", when: "11.09–16",
+        title: "언리얼 엔진 5.9 프리뷰: 에디터 패널에 Claude Code 같은 에이전트 연결",
+        body: ["에픽이 공개한 언리얼 5.9 프리뷰는 에디터 안 어시스턴트 패널에 <mark>Claude Code, Codex, Cursor</mark> 같은 코딩 에이전트를 직접 연결할 수 있고, MCP(AI가 외부 프로그램을 조작하게 해 주는 규격) 지원도 넓혔어요. 에픽은 이번 프리뷰를 주로 AI 에이전트로 만들었다고 밝혔고, 불안정할 수 있다고 경고했어요."],
+        use: "독자는 유니티를 쓰니 직접 쓸 일은 없어요. 게임 엔진들이 모두 'Claude Code 같은 에이전트를 엔진 안에서' 쓰는 방향으로 간다는 흐름으로 알아 두면 돼요.",
+        orig: "Unreal Engine 5.9 Preview is out — it was built with AI",
+        sources: [
+          { name: "80.lv", url: "https://80.lv/articles/unreal-engine-5-9-preview-is-out-it-was-built-with-ai/" },
+          { name: "Inven Global", url: "https://www.invenglobal.com/articles/28361/epic-says-unreal-engine-59-preview-was-built-mostly-by-ai-agents" }
+        ]
+      }
+    ]
+  },
+  {
     date: "2026-11-20",
     lead: "Claude Code에서 쓰는 새 모델 <b>Fable 5.2</b>가 나왔고, <b>Unity 7</b>은 12월 베타부터 코딩 에이전트를 유니티에 바로 연결할 수 있게 돼요.",
     glance: [
