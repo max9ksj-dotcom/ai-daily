@@ -7,7 +7,8 @@ window.NEWS = [
     glance: [
       { project: "tool",   text: "Unity CLI 1.0 정식 출시, 에이전트 연동" },
       { project: "mung",   text: "itch.io 게임잼, 12/1~15 웹게임·AI 허용" },
-      { project: "tool",   text: "언리얼 5.9 프리뷰, Claude Code 패널 연결" }
+      { project: "tool",   text: "언리얼 5.9 프리뷰, Claude Code 패널 연결" },
+      { project: "blade",  text: "[후속] 유니티 AI 게임잼 수상팀 발표" }
     ],
     top: [
       {
@@ -53,6 +54,16 @@ window.NEWS = [
         sources: [
           { name: "80.lv", url: "https://80.lv/articles/unreal-engine-5-9-preview-is-out-it-was-built-with-ai/" },
           { name: "Inven Global", url: "https://www.invenglobal.com/articles/28361/epic-says-unreal-engine-59-preview-was-built-mostly-by-ai-agents" }
+        ]
+      },
+      {
+        project: "blade", when: "11.18–19",
+        title: "[후속] 유니티 AI 게임잼 수상팀 발표: Unity CLI와 AI 도구로 24시간 만에 게임 완성",
+        body: ["부산 벡스코에서 열린 <b>Unity AI Game Jam</b>에서 참가자 <b>55명</b>이 Unity CLI와 Codex 플러그인 같은 AI 도구로 게임을 만들었고, 수상팀 3팀이 뽑혔어요. 1등은 팀 별꽃의 <b>‘Swing & Swing’</b>이고, 오픈AI API로 AI가 미리 만든 행동 후보 중 하나를 고르게 한 점이 눈에 띄었어요. <mark>Meshy는 텍스트·이미지로 3D 에셋을 만드는 크레딧</mark>을 제공했어요."],
+        use: "BladeArena에 몬스터를 늘리고 싶다면 Meshy 같은 도구로 초안 모델을 뽑아 보고, 애니메이터에 붙일 수 있는지부터 작은 몬스터 하나로 시험해 보세요.",
+        orig: "Three Winners Selected for 'Unity AI Game Jam' Joined by Unity, OpenAI, and Meshy",
+        sources: [
+          { name: "Inven Global", url: "https://www.invenglobal.com/articles/28843/three-winners-selected-for-unity-ai-game-jam-joined-by-unity-openai-and-meshy" }
         ]
       }
     ]
