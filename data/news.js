@@ -1,6 +1,70 @@
 // 매일 밤 새 날짜 객체를 배열 맨 앞에 추가합니다. (date는 KST 기준 YYYY-MM-DD)
-// project 값: tool(개발 도구) / blade(BladeArena) / beacon(Beacon Beat) / format(서식 퍼즐) / mung(멍때리는 방)
+// project 값(11/22부터): model(새 모델) / product(제품·기능) / dev(개발 도구) / research(연구·논문) / industry(업계·정책) / video(영상)
+// verify.level: official(공식 발표 확인) / cross(신뢰 매체 2곳 이상) / single(단일 출처, 되도록 쓰지 않기)
+// 11/20~21 항목은 예전 분류(tool/blade/beacon/format/mung)를 그대로 둡니다.
 window.NEWS = [
+  {
+    date: "2026-11-22",
+    lead: "Claude와 함께 쓴 <b>리만 가설</b> 증명을 Lean 커뮤니티가 공식으로 인정했어요. 한편 <b>OpenRouter</b>는 프롬프트를 몰래 빼낸 제공업체 3곳을 내보냈어요.",
+    glance: [
+      { project: "research", text: "[후속] 리만 가설 증명, Lean 커뮤니티 인정" },
+      { project: "dev",      text: "OpenRouter, 제공업체 3곳 퇴출·125개 제외" },
+      { project: "industry", text: "아마존, AI 스타트업 Decart 인수 임박(보도)" }
+    ],
+    top: [
+      {
+        project: "research", when: "11.21 (미국)",
+        title: "[후속] Claude로 찾은 리만 가설 증명, Lean 커뮤니티가 “맞다”고 공동 성명",
+        first: "앤트로픽 수학자 <b>레벤트 알푀게</b>가 Claude와 함께 찾았다고 밝힌 <b>리만 가설</b>(1859년부터 풀리지 않은 소수 분포 문제) 증명을, 증명 검사 언어 <b>Lean</b>과 수학 라이브러리 <b>Mathlib</b> 커뮤니티가 공동 성명으로 인정했어요.",
+        body: [
+          "MIT 수학자 <b>앤드루 서덜랜드</b>는 Lean 코드를 따로 컴파일해 문제없이 통과했다며, 뭔가 수상할 가능성은 <mark>“거의 0”</mark>이라고 말했어요. 사이언티픽 아메리칸은 Lean으로 적은 명제가 진짜 리만 가설과 같은지 확인하는 마지막 검사(comparator run)도 끝났다고 전했어요.",
+          "알푀게는 같은 방법으로 디리클레 L-함수(리만 제타 함수를 넓힌 함수들)에 대한 일반화된 리만 가설도 증명된다고 밝혔어요. 사람이 읽을 수 있는 일반 논문도 따로 쓸 계획이에요."
+        ],
+        caution: "클레이 수학연구소는 아직 ‘미해결’로 두고 있어요. 상금 100만 달러는 정식 출판 뒤 2년 이상 학계가 받아들여야 받을 수 있어요. 앤트로픽의 공식 입장은 확인하지 못했어요.",
+        orig: "The AI Riemann hypothesis proof is true, independent mathematicians confirm",
+        verify: { level: "cross", note: "사이언티픽 아메리칸(11.21 갱신)과 야후 뉴스(11.21 19:00 UTC)가 같은 내용을 보도했어요. 처음 주장은 11.20에 나왔고, 오늘 소식은 검증 결과예요." },
+        sources: [
+          { type: "뉴스", name: "Scientific American", url: "https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/" },
+          { type: "뉴스", name: "Yahoo News", url: "https://www.yahoo.com/news/science/articles/anthropic-mathematician-claims-claude-helped-190054374.html" }
+        ]
+      },
+      {
+        project: "dev", also: ["industry"], when: "11.22",
+        title: "OpenRouter, 프롬프트 유출된 추론 제공업체 3곳 퇴출하고 125개 엔드포인트의 ‘데이터 미보관’ 자격 박탈",
+        first: "여러 AI 모델을 한 API로 묶어 주는 <b>OpenRouter</b>가 일부 추론 제공업체(모델을 실제로 돌려 주는 회사)에서 사용자 프롬프트가 새어 나간 사실이 드러나자, <b>3곳</b>을 내보내고 <b>125개</b> 엔드포인트를 ZDR(데이터를 저장하지 않는다는 약속) 대상에서 뺐어요.",
+        body: [
+          "보안 회사 <b>Dragos</b> 연구진이 가짜 미끼 데이터(카나리아 토큰)를 넣어 보니, 몇몇 제공업체에서 몇 달 동안 프롬프트가 복사되고 있었다고 해요. OpenRouter는 <mark>자기 시스템은 뚫리지 않았다</mark>고 밝혔고, 피해 고객에게 따로 알렸어요.",
+          "125개 중에는 혐의가 확인된 곳뿐 아니라 예방 차원에서 뺀 곳도 섞여 있어요. 다시 자격을 주려면 제공업체가 보증과 검증을 거쳐야 해요."
+        ],
+        caution: "퇴출된 3곳의 이름은 공개되지 않았어요. 공지에 Novita·Phala·Together AI의 사고 공지가 링크돼 있지만, 이 셋이 퇴출 대상이라고 밝힌 건 아니에요.",
+        use: "OpenRouter로 API를 쓰고 있다면 대시보드에서 쓰는 모델의 제공업체와 ZDR 설정을 확인하고, 민감한 내용은 제공업체를 직접 고정하는 게 안전해요.",
+        orig: "Data Processing Incidents on Inference Providers",
+        verify: { level: "official", note: "OpenRouter 공식 블로그(11.22)에서 직접 확인했고, The Hacker News·Unite.ai도 같은 내용을 보도했어요." },
+        sources: [
+          { type: "공식", name: "OpenRouter 블로그", url: "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" },
+          { type: "뉴스", name: "The Hacker News", url: "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html" },
+          { type: "뉴스", name: "Unite.AI", url: "https://www.unite.ai/openrouter-cuts-three-providers-after-ai-prompt-exposure-findings/" }
+        ]
+      }
+    ],
+    items: [
+      {
+        project: "industry", when: "11.21 (미국)",
+        title: "아마존, AI 스타트업 Decart를 약 75억 달러에 인수 임박(FT 보도)",
+        body: [
+          "파이낸셜타임스는 아마존이 실시간 AI 영상 생성으로 알려진 <b>Decart</b>를 약 <b>75억 달러</b>(약 10조 원) 가치로 인수하는 협상을 마무리하고 있고, 이르면 다음 주 발표될 수 있다고 보도했어요. Decart는 아마존의 AI 칩 <b>Trainium3</b>를 일찍 쓴 회사예요.",
+          "<mark>두 회사 모두 아직 공식 발표는 하지 않았고</mark>, 협상이 깨질 수도 있다고 해요."
+        ],
+        orig: "Amazon nearing $7.5B deal to buy AI start-up Decart: FT",
+        verify: { level: "cross", note: "FT 원문은 유료라 못 열었고, 이를 인용한 Seeking Alpha·Business Upturn 보도로 확인했어요. 확정된 사실이 아니라 ‘보도’예요." },
+        sources: [
+          { type: "뉴스", name: "Seeking Alpha (TradingView)", url: "https://www.tradingview.com/news/seekingalpha:71b3d28ff094b:0-amazon-nearing-7-5b-deal-to-buy-ai-start-up-decart-ft/" },
+          { type: "뉴스", name: "Business Upturn", url: "https://businessupturn.com/technology/amazon-in-advanced-talks-to-buy-ai-startup-decart-for-7-5-billion-report-says/" }
+        ]
+      }
+    ],
+    review: { candidates: 14, passed: 3, note: "Gemini 4 Neon(11.18)·OpenAI Dots 확대(11.19)·Inkling 2 Mini(11.20)·앤트로픽 상장 마감(11.20) 등은 오늘 나온 소식이 아니라서 뺐어요. 출처가 개인 블로그·집계 사이트뿐인 항목도 뺐어요." }
+  },
   {
     date: "2026-11-21",
     lead: "<b>Unity CLI 1.0</b>이 베타를 끝내고 정식으로 나왔어요. Claude Code로 유니티를 다루는 길이 더 단단해졌어요.",
