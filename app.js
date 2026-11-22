@@ -103,18 +103,4 @@ function render(f){
     : `<p class="empty">아직 소식이 없어요. 오늘 밤 10시 30분에 첫 소식이 올라와요.</p>`;
 }
 
-(function init(){
-  const bar = document.getElementById("filters");
-  const opts = [["all","전체"], ...Object.entries(CAT)];
-  let cur = "all";
-  try { const v = localStorage.getItem("aid-filter"); if (v && (v === "all" || CAT[v])) cur = v; } catch (_) {}
-  bar.innerHTML = opts.map(([k,l]) => `<button class="chip" data-k="${k}" aria-pressed="${k===cur}">${l}</button>`).join("");
-  bar.addEventListener("click", e => {
-    const b = e.target.closest(".chip"); if (!b) return;
-    cur = b.dataset.k;
-    bar.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", String(x.dataset.k === cur)));
-    try { localStorage.setItem("aid-filter", cur); } catch (_) {}
-    render(cur);
-  });
-  render(cur);
-})();
+render("all");
