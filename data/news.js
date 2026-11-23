@@ -4,6 +4,14 @@
 // 11/20~21 항목은 예전 분류(tool/blade/beacon/format/mung)를 그대로 둡니다.
 window.NEWS = [
   {
+    date: "2026-11-23",
+    lead: "오늘은 검수를 통과한 새 AI 소식이 없어요.",
+    glance: [],
+    top: [],
+    items: [],
+    review: { candidates: 8, passed: 0, note: "OpenAI 수석과학자 글(TechCrunch 11.22)은 공식 원문·두 번째 매체를 확인하지 못했어요. ARTEX 사이버 공격 건은 11.13~16 소식이라 24시간 기준을 넘었어요. 아마존-Decart 인수는 이미 11.22 항목에 실렸어요. GPT-6.2·Gemini 4 Neon 등은 며칠 지난 소식이고, 모아 둔 요약 사이트 글만 있는 것은 뺐어요." }
+  },
+  {
     date: "2026-11-22",
     lead: "Claude와 함께 쓴 <b>리만 가설</b> 증명을 Lean 커뮤니티가 공식으로 인정했어요. 한편 <b>OpenRouter</b>는 프롬프트를 몰래 빼낸 제공업체 3곳을 내보냈어요.",
     glance: [
