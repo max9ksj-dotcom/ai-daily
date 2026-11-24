@@ -4,6 +4,52 @@
 // 11/20~21 항목은 예전 분류(tool/blade/beacon/format/mung)를 그대로 둡니다.
 window.NEWS = [
   {
+    date: "2026-11-24",
+    lead: "<b>엔비디아</b> 이사회가 사임했던 젠슨 황을 CEO로 복귀시켰고, 앤트로픽은 코드 변경을 AI가 검토·정리해 주는 <b>Claude Ship</b>을 내놨어요.",
+    glance: [
+      { project: "industry", text: "엔비디아, 젠슨 황 CEO 복귀" },
+      { project: "dev",      text: "앤트로픽, PR 관리 'Claude Ship' 베타" }
+    ],
+    top: [
+      {
+        project: "industry", when: "11.23 (미국)",
+        title: "엔비디아 이사회, 사임했던 젠슨 황을 CEO로 복귀시켜요",
+        first: "엔비디아 이사회가 11월 12일 물러났던 <b>젠슨 황</b>을 만장일치로 사장·CEO·이사에 <mark>즉시 복귀</mark>시켰다고 공식 발표했어요.",
+        body: [
+          "이사회는 미국 정부 고위 관계자의 의견을 들은 뒤 황의 복귀가 국가안보 위험이 아니라고 판단했다고 밝혔어요. 임시 CEO였던 <b>콜레트 크레스</b>는 CFO(재무 책임자)로 돌아가요.",
+          "언론 보도에 따르면 주가는 초기 거래에서 최대 약 <b>30%</b> 올랐어요. 황이 외국 정보기관의 표적이 됐다는 보도를 두고 이사회 독립 위원회의 조사는 계속되고 있어요."
+        ],
+        caution: "매체마다 사임에서 복귀까지 기간을 11일·2주 등으로 다르게 써요. 트럼프 대통령이 복귀를 공개적으로 밀었다는 보도가 있지만, 이사회 결정에 미친 영향은 확인되지 않았어요. 주가 상승률은 보도 기준이에요.",
+        orig: "NVIDIA Board Reinstates Jensen Huang as President, CEO and Board Director",
+        verify: { level: "official", note: "엔비디아 공식 보도자료(11.23)와 SEC 8-K를 확인했고, Axios·NBC News·NPR·알자지라도 같은 내용을 보도했어요." },
+        sources: [
+          { type: "공식", name: "NVIDIA 뉴스룸", url: "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director" },
+          { type: "뉴스", name: "Axios", url: "https://www.axios.com/2026/11/23/nvidia-board-jensen-huang-as-ceo" },
+          { type: "뉴스", name: "NPR", url: "https://www.npr.org/2026/11/23/nx-s1-6050910/nvidias-jensen-huang-trump" }
+        ]
+      },
+      {
+        project: "dev", when: "11.23 (미국)",
+        title: "앤트로픽, GitHub 풀 리퀘스트를 AI가 검토·수정하는 ‘Claude Ship’ 베타 공개",
+        first: "앤트로픽이 코드 변경 요청(<b>풀 리퀘스트</b>, PR)을 AI 에이전트가 검토하고 고쳐 주는 <b>Claude Ship</b>을 베타로 내놨어요.",
+        body: [
+          "이미 정식 출시된 <b>Code Review</b>에 더해, 실패한 검사나 충돌을 정리하는 베타 에이전트 <b>PR Steward</b>와 <b>Claude Approvals</b>가 묶여 있어요. Claude Code와 데스크톱 앱에서 쓸 수 있고, 일반 Claude Code 사용량으로 계산돼요.",
+          "<mark>어디서 돌릴지, 어떤 변경에 사람 확인이 필요한지는 팀이 정해요</mark>."
+        ],
+        caution: "매체에 따라 ‘승인까지 AI가 한다’고 쓰기도 하고, 앤트로픽 문서를 인용한 쪽은 PR Steward가 승인·병합은 하지 않게 설계됐다고 해요. 앤트로픽 공식 페이지는 직접 열어 보지 못했어요.",
+        use: "팀 저장소에 쓰기 전에 승인·병합 권한 설정부터 확인해 보세요.",
+        orig: "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+        verify: { level: "cross", note: "TechCrunch와 9to5Mac이 11.23자로 같은 내용을 보도했어요(발행 시각은 확인 못 함)." },
+        sources: [
+          { type: "뉴스", name: "TechCrunch", url: "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/" },
+          { type: "뉴스", name: "9to5Mac", url: "https://9to5mac.com/2026/11/23/anthropic-launches-new-claude-ship-feature-for-builders/" }
+        ]
+      }
+    ],
+    items: [],
+    review: { candidates: 9, passed: 2, note: "MS agent-framework PyPI 탈취(11.17)는 기간을 넘었어요. OpenWorks·Sierra Series F·GLM-5.4는 공식 원문이나 두 번째 신뢰 매체를 확인하지 못했어요. 아마존-Decart는 이미 11.22에 실렸고, GPT-6.2·Gemini 4 등은 며칠 지난 소식이에요. 오늘 올라온 유튜브 영상은 날짜를 확인하지 못해 뺐어요." }
+  },
+  {
     date: "2026-11-23",
     lead: "오늘은 검수를 통과한 새 AI 소식이 없어요.",
     glance: [],
