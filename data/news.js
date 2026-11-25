@@ -4,6 +4,14 @@
 // 11/20~21 항목은 예전 분류(tool/blade/beacon/format/mung)를 그대로 둡니다.
 window.NEWS = [
   {
+    date: "2026-11-25",
+    lead: "오늘은 검수를 통과한 새 AI 소식이 없어요.",
+    glance: [],
+    top: [],
+    items: [],
+    review: { candidates: 9, passed: 0, note: "Claude Ship(11.23)은 어제 항목에 이미 실렸어요. Meta Muse의 인스타그램 연동·Epochal 'Time Portal'·MS '로켓' 보고서·GPTZero 5는 공식 원문이나 두 번째 신뢰 매체, 발행 시각을 확인하지 못했어요. GLM-5.4는 공식 발표가 확인되지 않았고, OpenWorks·GPT-6.2·Gemini 4 Neon 등은 며칠 지난 소식이에요. 요약 사이트 글만 있는 것은 뺐어요." }
+  },
+  {
     date: "2026-11-24",
     lead: "<b>엔비디아</b> 이사회가 사임했던 젠슨 황을 CEO로 복귀시켰고, 앤트로픽은 코드 변경을 AI가 검토·정리해 주는 <b>Claude Ship</b>을 내놨어요.",
     glance: [
