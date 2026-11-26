@@ -4,6 +4,14 @@
 // 11/20~21 항목은 예전 분류(tool/blade/beacon/format/mung)를 그대로 둡니다.
 window.NEWS = [
   {
+    date: "2026-11-26",
+    lead: "오늘은 검수를 통과한 새 AI 소식이 없어요.",
+    glance: [],
+    top: [],
+    items: [],
+    review: { candidates: 8, passed: 0, note: "코그니션 'SWE-2.1'은 AI타임스 보도만 있고 공식 원문과 두 번째 매체를 확인하지 못했어요. 오픈AI 프라이빗 추론·GPT-Live-1.1 대기 요금은 발표 시점이 이전(9~11월)으로 보여 24시간 안인지 확인되지 않았어요. GLM-5.4·ERNIE 5.5 Flash는 공식 원문 확인 실패, GPT-6.2·Gemini 4 Neon·OpenWorks는 며칠 지난 소식이에요. MS '로켓'은 11.23 보고서라 기간을 넘었어요." }
+  },
+  {
     date: "2026-11-25",
     lead: "오늘은 검수를 통과한 새 AI 소식이 없어요.",
     glance: [],
