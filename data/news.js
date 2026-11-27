@@ -4,6 +4,14 @@
 // 11/20~21 항목은 예전 분류(tool/blade/beacon/format/mung)를 그대로 둡니다.
 window.NEWS = [
   {
+    date: "2026-11-27",
+    lead: "오늘은 검수를 통과한 새 AI 소식이 없어요.",
+    glance: [],
+    top: [],
+    items: [],
+    review: { candidates: 6, passed: 0, note: "Gemini 4 Neon·GLM-5.4·GPT-6.2는 며칠 지난 소식이거나 날짜가 출처마다 달라요. 톰슨 로이터 신모델은 8월 발표 이야기이고 Dataconomy 글만 있어 공식 원문·두 번째 신뢰 매체를 확인하지 못했어요. 국내 AI 소식(연세대 AI 비전 선포식 등)은 AI 모델·제품 소식이 아니에요. 요약 사이트 글만 있는 것은 뺐어요." }
+  },
+  {
     date: "2026-11-26",
     lead: "오늘은 검수를 통과한 새 AI 소식이 없어요.",
     glance: [],
